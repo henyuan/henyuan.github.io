@@ -1,0 +1,181 @@
+body{
+	font-family: "微软雅黑";
+	margin-top: 70px;
+}
+.navbar-default{
+	background-color: #FFFFFF;
+	border: none;
+	box-shadow: 0px 2px 8px 0px rgba(50,50,0,0.6);
+}
+.navbar-brand{
+	font-size: 30px;
+	font-weight: bold;
+	color: #40D2B1;
+	height: 70px;
+	line-height: 35px;
+}
+.navbar-nav>li>a{
+	font-size: 16px;
+	height: 70px;
+	line-height: 35px;
+	font-weight: bold;
+}
+.navbar-toggle{
+	margin-top: 17px;
+}
+/*以上为导航条自定义样式*/
+
+#home{
+	background: url("../img/lunhuan.jpg") no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	width: 100%;
+}
+.lvjing{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+#home h1{
+	color: #F5F5F5;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+#home p{
+	color: #F5F5F5;
+	font-weight: 400;
+	line-height: 25px;
+}
+#home img{
+	margin-top: 20px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+#before{
+	padding: 80px;
+	text-align: center;
+}
+#before .col-md-4{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#before a{
+	color: #000000;
+}
+#before a:link{
+	text-decoration: none;
+}
+#before .kapian{
+	margin: 0 auto;
+	padding: 20px;
+	width: 80%;
+	transition: all 2s;
+}
+#before .kapian:hover{
+	background-color: #31B0D5;
+	border-radius: 60px;
+}
+#before span{
+	font-size: 40px;
+}
+
+
+.kuai img{
+	width: 60%;
+	height: 60%;
+}
+.kuai section{
+	padding: 30px;
+	text-align: center;
+	background-color: #F5F5F5;
+}
+.kuai h1{
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 70px;
+}
+.kuai p{
+	color: #777777;
+	size: 16px;
+	line-height: 32px;
+}
+.kuai .col-md-6{
+	text-align: left;
+	padding: 20px;
+}
+.kuai #jsp{
+	background-color: #FFFFFF;
+}
+.kuai span{
+	width: 40px;
+	height: 40px;
+	background-color: rgb(64,210,177);
+	border-radius: 50%;
+	text-align: center;
+	color: #FFFFFF;
+	line-height: 40px;
+	margin-right: 20px;
+}
+
+
+
+#address{
+	background: url(../img/address.png) no-repeat center center;
+	background-size: 100% ;
+	color: #F7F7F7;
+	
+}
+.address{
+	padding: 40px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+#address .col-md-6{
+	margin-bottom: 20px;
+}
+#address h2{
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+#address h2 span{
+	margin-right: 20px;
+}
+#address p{
+	font-size: 16px;
+	margin-right: 10px;
+}
+#address p span{
+	margin-right: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#address form div{
+	margin-bottom: 20px;
+}
+#address .form-control{
+	border: none;
+	border-radius: 0;
+	height: 50px;
+}
+#address textarea.form-control{
+	height: auto;
+}
+#address input[type=submit]{
+	background-color: #40D2B1;
+	color: #FFFFFF;
+	font-weight: bold;
+	transition: all 1s;
+}
+#address input[type=submit]:hover{
+	background-color: #286090;
+}
+
+
+#foolter{
+	text-align: center;
+	height: 60px;
+	font-size: 14px;
+	line-height: 60px;
+}

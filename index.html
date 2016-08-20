@@ -1,13 +1,224 @@
-<html>
-    <head>
-    	<meta charset="utf-8">
-        <title>测试标题</title>
-    </head>
-    <body>
-    	<center>
-    		<div style="margin-top: 100px;">
-    			<h1>待建设中……</h1>
-    		</div>	
-    	</center>
-    </body>
+<!doctype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>网站学习</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-henyuan.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	</head>
+
+	<body>
+		<section id="top">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<!-- 小屏幕按钮 -->
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-toggles">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- 小屏幕导航按钮和logo -->
+						<a href="index.html" class="navbar-brand">很远小栈</a>
+					</div>
+					<!-- 导航 -->
+					<div class="navbar-collapse collapse" id="navbar-toggles">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="#home">首页</a>
+							</li>
+							<li>
+								<a href="#before">前置技能</a>
+							</li>
+							<li>
+								<a href="#asp">ASP</a>
+							</li>
+							<li>
+								<a href="#jsp">JSP</a>
+							</li>
+							<li>
+								<a href="#php">PHP</a>
+							</li>
+							<li>
+								<a href="#address">联系我</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</section>
+
+
+		<section id="home">
+			<div class="lvjing">
+				<div class="container">
+					<!--data-wow-duration动画持续时间
+					data-wow-delay动画延迟时间
+					data-wow-offset偏移量
+					data-wow-iteration重复次数-->
+					<div class="row wow slideInUp" data-wow-duration="1.5s">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<h1>Bootstarp实战课程</h1>
+							<p>这是第二次书写此前端网页</p>
+							<p>为了更好的学习网站，和制作模板</p>
+							<img class="img-thumbnail img-rounded" src="img/home.gif" alt="此时用图片" />
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="before">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 wow zoomIn">
+						<div class="kapian">
+							<a href="#top">
+								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								<h3>消息查找</h3>
+								<p>程序员最应该会的一项技能，网络资源的获取</p>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 wow zoomIn" data-wow-delay="0.5s">
+						<div class="kapian">
+							<a href="#top">
+								<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+								<h3>学习能力</h3>
+								<p>程序员最应该会的一项技能，持久的对新知识的渴求</p>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 wow zoomIn" data-wow-delay="1s">
+						<div class="kapian">
+							<a href="#top">
+								<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+								<h3>精益求精</h3>
+								<p>程序员最应该会的一项技能，对程序近乎苛刻的完美要求</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<div class="kuai">
+			<section id="asp">
+				<div class="container">
+					<div class="row wow flipInX" >
+						<div class="col-md-6">
+							<h1>网页开发之ASP</h1>
+							<p>微软开发，基于C#的网站开发语言</p>
+							<p><span class="glyphicon glyphicon-arrow-right"></span>便捷的开发效率</p>
+							<p><span class="glyphicon glyphicon-arrow-right"></span>优秀的学习曲线</p>
+							<p><span class="glyphicon glyphicon-arrow-right"></span>更多中文文档</p>
+						</div>
+						<div class="col-md-6">
+							<img class="img-thumbnail" src="img/asp.jpg"/>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+			<section id="jsp">
+				<div class="container">
+					<div class="row wow flipInX">
+						<div class="col-md-6">
+							<img class="img-thumbnail" src="img/java.jpg"/>
+						</div>
+						<div class="col-md-6">
+							<h1>网页开发之JSP</h1>
+								<p>基于的java的网站开发语言</p>
+								<p><span class="glyphicon glyphicon-arrow-right"></span>超多的第三方解决方案</p>
+								<p><span class="glyphicon glyphicon-arrow-right"></span>更多使用框架便捷开发</p>
+								<p><span class="glyphicon glyphicon-arrow-right"></span>市场需求最旺盛的语言</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section id="php">
+				<div class="container">
+					<div class="row wow flipInX">
+						<div class="col-md-6">
+							<h1>网页开发之PHP</h1>
+							<p>新兴开源语言，具有灵活开发特点</p>
+							<p><span class="glyphicon glyphicon-arrow-right"></span>活跃的开源社区</p>
+							<p><span class="glyphicon glyphicon-arrow-right"></span>更多开源项目</p>
+							<p><span class="glyphicon glyphicon-arrow-right"></span>语法函数更加灵活，轻量级</p>
+						</div>
+						<div class="col-md-6">
+							<img class="img-thumbnail" src="img/php.jpg"/>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<section id="address">
+			<div class="address">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 wow bounceInLeft" data-wow-duration="1s">
+							<h2><span class="glyphicon glyphicon-send"></span>联系我</h2>
+							<p><span class="glyphicon glyphicon-home"></span>地址:&nbsp;安徽城市管理职业学院</p>
+							<p><span class="glyphicon glyphicon-envelope"></span>邮箱:&nbsp;xxxx@XXX.com</p>
+							<p><span class="glyphicon glyphicon-earphone"></span>手机:&nbsp;12345678901</p>
+						</div>
+						<div class="col-md-6 wow bounceInRight" data-wow-duration="1s" data-wow-delay="1s">
+							<form action="#" method="post">
+								<div class="col-md-6">
+									<input type="text" class="form-control" placeholder="您的姓名"/>
+								</div>
+								<div class="col-md-6">
+									<input type="email" class="form-control" placeholder="您的邮箱"/>
+								</div>
+								<div class="col-md-12">
+									<input type="text" class="form-control" placeholder="标题" />
+								</div>
+								<div class="col-md-12">
+									<textarea class="form-control" placeholder="留言内容" rows="8"></textarea>
+								</div>
+								<div class="col-md-8">
+									<input type="submit" class="form-control" value="提交" />
+								</div>
+							</form>
+						</div>
+							
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="foolter">
+			<div class="container">
+				<div class="row">
+					<p>Copyright © 2016 花开无涯. All Rights Reserved</p>
+				</div>
+			</div>
+		</section>
+		<script src="js/jquery-2.2.3.min.js"></script>
+		<script src="js/jquery.singlePageNav.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/wow.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".nav").singlePageNav({
+					offset:70
+				});
+				$(".navbar-collapse a").click(function(){
+					$(".navbar-collapse").collapse('hide');
+				});
+			})
+			new WOW().init();
+		</script>
+	</body>
+
 </html>
