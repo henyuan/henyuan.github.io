@@ -1,0 +1,42 @@
+var lineChartData={
+	//x坐标
+	labels:["2","4","6","8","10","12","14","16","18","20","22","24"],
+	datasets:[{
+		//统计表背景色
+		fillColor:"rgba(255,255,255,0)",
+		//统计表画笔颜色
+		strokeColor:"rgba(0,0,0,1)",
+		//点颜色
+		pointColor:"rgba(155,39,39,1)",
+		//点边框颜色
+		pointStokeColor:"#fff",
+		//鼠标触发颜色
+		ponintHighlightFill:"#fff",
+		//鼠标触发边框颜色
+		pointHighlightStroke:"rgba(220,220,220,1)",
+		//y坐标数据
+		data:[1,2,3,4,5,5,6,7,8,8,9,9]
+	},{
+		//统计表背景色
+		fillColor:"rgba(255,255,255,0)",
+		//统计表画笔颜色
+		strokeColor:"rgba(92,184,92,1)",
+		//点颜色
+		pointColor:"rgba(23,126,23,1)",
+		//点边框颜色
+		pointStokeColor:"#fff",
+		//鼠标触发颜色
+		ponintHighlightFill:"#fff",
+		//鼠标触发边框颜色
+		pointHighlightStroke:"rgba(151,187,205,1)",
+		//y坐标数据
+		data:[2,2,1,4,2,4,5,7,8,8,4,3]
+	}
+	]
+}
+window.onload=function(){
+	var ctx = document.getElementById("canvas").getContext("2d");
+	window.myLine=new Chart(ctx).Line(lineChartData,{
+		responsive:true
+	});
+}

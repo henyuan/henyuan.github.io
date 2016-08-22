@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>分类管理</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/henyuan.css" />
+	</head>
+
+	<body>
+		<section id="top">
+			<nav class="navbar navbar-default  navbar-fixed-top">
+				<div class="container">
+					<!-- 小屏幕按钮 -->
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-toggles">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- 小屏幕导航按钮和logo -->
+						<a href="admin.html" class="navbar-brand">管理系统</a>
+					</div>
+					<!-- 导航 -->
+					<div class="navbar-collapse collapse" id="navbar-toggles">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="admin.html"><span class="glyphicon glyphicon-home">
+								</span>&nbsp;&nbsp;管理首页</a>
+							</li>
+							<li>
+								<a href="userlist.html"><span class="glyphicon glyphicon-user">
+								</span>&nbsp;&nbsp;用户管理</a>
+							</li>
+							<li>
+								<a href="messgelist.html"><span class="glyphicon glyphicon-th-list">
+								</span>&nbsp;&nbsp;内容管理</a>
+							</li>
+							<li class="active">
+								<a href="taglist.html"><span class="glyphicon glyphicon-tags">
+								</span>&nbsp;&nbsp;分类管理</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">admin<span class="caret"></span></a>
+						          <ul class="dropdown-menu">
+						            <li><a href="#"><span class="glyphicon glyphicon-user">
+									</span>&nbsp;个人中心</a></li>
+						            <li><a href="#"><span class="glyphicon glyphicon-console">
+						            </span>&nbsp;更改密码</a></li>
+						          </ul>
+							</li>
+							<li><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;登出</a></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header"><h4>管理文章分类</h4></div>
+				<div class="col-md-10">
+					<div class="form-group">
+						<input id="tag" class="form-control" type="text" placeholder="请输入新的分类" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
+					</div>				
+				</div>
+				<div class="col-md-2">
+					<button type="button" class="btn btn-success" onclick="addtag()">添加</button>
+				</div>
+				<div class="col-md-12">
+<div class="alert alert-info alert-dismissible pull-left" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>第一个分类</strong>
+</div>
+<div class="alert alert-info alert-dismissible pull-left" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>第二个分类</strong>
+</div>
+<div class="alert alert-info alert-dismissible pull-left" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>第三个分类</strong>
+</div>
+<div class="alert alert-info alert-dismissible pull-left" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>第四个分类</strong>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<section id="foolter">
+			<div class="container">
+				<div class="row">
+					<p>Copyright © 2016 花开无涯. All Rights Reserved <a href="index.html">首页学习</a></p>
+				</div>
+			</div>
+		</section>
+		<script src="js/jquery-2.2.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+			function addtag(){
+				var tag = $("#tag").val();
+				$("#tag").val("");
+				if(tag.length>0){
+					var dom = $("<div class='alert alert-info alert-dismissible pull-left' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>"+tag+"</strong></div>");
+					$(".alert").last().after(dom);
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,49 @@
+body{
+	font-family: "微软雅黑";
+	margin-top: 85px;
+}
+.navbar-default{
+	background-color: #FFFFFF;
+	border: none;
+	box-shadow: 0px 2px 8px 0px rgba(50,50,0,0.6);
+}
+.navbar-brand{
+	font-size: 30px;
+	font-weight: bold;
+	color: #40D2B1;
+	height: 50px;
+	line-height: 25px;
+}
+.navbar-nav>li>a{
+	font-size: 16px;
+	height: 70px;
+	line-height: 35px;
+	/*font-weight: bold;*/
+}
+.navbar-toggle{
+	margin-top: 17px;
+}
+/*以上为导航条自定义样式*/
+#foolter{
+	text-align: center;
+	height: 60px;
+	font-size: 14px;
+	line-height: 60px;
+}
+
+
+.msgright{
+	float: right;
+}
+
+.page-header{
+	margin-top: 0;
+}
+.col-md-10 form{
+	padding: 10px;
+	border: solid 1px #DDDDDD;
+	border-top: none;
+}
+.col-md-12 .alert{
+	margin-right: 10px;
+}
