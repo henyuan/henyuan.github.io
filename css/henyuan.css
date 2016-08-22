@@ -47,3 +47,6 @@ body{
 .col-md-12 .alert{
 	margin-right: 10px;
 }
+.col-md-2 button{
+	margin-bottom: 20px;
+}
