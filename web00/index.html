@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>青鸟租房</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/my.css"/>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+							data-toggle = "collapse" data-target = "#bs1" aria-expanded="false">
+							<span class="sr-only">下拉列表</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+							<img alt="logo" src="img/logo.gif" />
+						</a>
+				</div>
+				<div class="collapse navbar-collapse navbar-right" id="bs1">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group input-group-sm">
+							<label for="uname">用户名:</label>
+							<input id="uname" type="text" class="form-control" placeholder="请输入用户名" />
+						</div>
+						<div class="form-group input-group-sm">
+							<label for="upass">密码:</label>
+							<input id="upass" type="password" class="form-control" placeholder="请输入用户密码" />
+						</div>
+						<button type="submit" class="btn btn-danger btn-sm">登陆</button>
+						<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#zhuce">注册</button>
+						<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#addhouse">发布房屋信息</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+<section id="searchs">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<span>房屋信息</span>
+					</div>
+					<div class="panel-body">
+						<form>
+							<div class="form-group col-md-3">
+								<div class="row">
+									<div class="col-md-2">
+										<label for="search">标题:</label>
+									</div>
+									<div class="col-md-7">
+										<input class="form-control" type="text" id="search" placeholder="请输入搜索标题" />
+									</div>
+									<div class="col-md-3">
+										<button type="submit" class="btn btn-danger btn-sm">搜索房屋</button>
+									</div>
+								</div>
+							</div>	
+							<div class="form-group pull-right">
+								<label for="area">面积:</label>
+								<select id="area">
+									<option>不限</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+							</div>	
+							<div class="form-group pull-right">
+								<label for="types">房型:</label>
+								<select id="types">
+									<option>不限</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+							</div>	
+							<div class="form-group pull-right">
+								<label for="address">房屋位置:</label>
+								<select id="address">
+									<option>不限</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<select id="price">
+									<option>未知</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+							</div>	
+							<div class="form-group pull-right">
+								<label for="price">价格:</label>
+								<select id="price">
+									<option>不限</option>
+									<option>1000-3000</option>
+									<option>3</option>
+								</select>
+							</div>	
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="house">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<table class="table table-striped">
+							<tbody>
+								<tr><td>
+									<div class="row">
+										<div class="col-md-2">
+											<img class="media-object img-thumbnail img-responsive" src="img/thumb_house.gif" alt="house" />
+										</div>
+										<div class="col-md-6">
+											<a href="#">好房出租</a>
+													<p>12asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+													</p>
+										</div>
+											
+										<div class="col-md-2 text-center">
+											<button type="button" class="btn btn-danger">你好</button>
+										</div>
+										<div class="col-md-2 text-center">
+											<button type="button" class="btn btn-danger">你好</button>
+										</div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="row">
+										<div class="col-md-2">
+											<img class="media-object img-thumbnail img-responsive" src="img/thumb_house.gif" alt="house" />
+										</div>
+										<div class="col-md-6">
+											<a href="#">好房出租</a>
+													<p>12asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+													</p>
+										</div>
+											
+										<div class="col-md-2 text-center">
+											<button type="button" class="btn btn-danger">你好</button>
+										</div>
+										<div class="col-md-2 text-center">
+											<button type="button" class="btn btn-danger">你好</button>
+										</div>
+									</div>
+								</td></tr>
+								<tr><td>
+									<div class="row">
+										<div class="col-md-2">
+											<img class="media-object img-thumbnail img-responsive" src="img/thumb_house.gif" alt="house" />
+										</div>
+										<div class="col-md-6">
+											<a href="#">好房出租</a>
+													<p>12asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+														2asnjsnvaknclasn
+													</p>
+										</div>
+											
+										<div class="col-md-2 text-center">
+											<button type="button" class="btn btn-danger">你好</button>
+										</div>
+										<div class="col-md-2 text-center">
+											<button type="button" class="btn btn-danger">你好</button>
+										</div>
+									</div>
+								</td></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="pages">
+	<div class="container">
+		<nav class="text-right">
+			<ul class="pagination">
+				<li><a href="#">首页</a></li>
+				<li>
+					<a href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li>
+					<a href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+				<li><a href="#">尾页</a></li>
+				<li><a>1/5</a></li>
+				<li><a>跳转到<select name="">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+					<option value="">5</option>
+				</select></a></li>
+				<li><a class="btn btn-default">确定</a></li>
+			</ul>
+		</nav>
+	</div>
+</section>
+<footer>
+	<div class="container">
+		<hr />
+		<div class="row">
+			<div class="col-md-4">
+				青鸟租房&copy;2016 北大青鸟 京ICP证1000001号
+			</div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="pull-right">
+					<a href="#">关于我们</a>&nbsp;&bull;&nbsp;
+					<a href="#">联系方式</a>&nbsp;&bull;&nbsp;
+					<a href="#">意见反馈</a>&nbsp;&bull;&nbsp;
+					<a href="#">帮助中心</a>	
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<section id="Modal">
+	
+	
+<div class="modal fade" id="zhuce">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">新用户注册</h4>
+      </div>
+      <div class="modal-body">
+        		<form class="form-horizontal">
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">用户名：</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="newuser" placeholder="请输入用户名">
+    					</div>
+    					<div class="col-sm-4"><span class="glyphicon glyphicon-asterisk"></span>6-12位字母与数字组合</div>
+  					</div>
+  					<div class="form-group">
+    					<label for="onepass" class="col-sm-2 control-label">密码：</label>
+    					<div class="col-sm-6">
+      						<input type="password" class="form-control" id="onepass" placeholder="请输入密码">
+    					</div>
+    					<div class="col-sm-4"><span class="glyphicon glyphicon-asterisk"></span>6-12位字母与数字的组合</div>
+  					</div>
+  					<div class="form-group">
+    					<label for="twopass" class="col-sm-2 control-label">重复密码：</label>
+    					<div class="col-sm-6">
+      						<input type="password" class="form-control" id="twopass" placeholder="请再次输入密码">
+    					</div>
+    					<div class="col-sm-4"><span class="glyphicon glyphicon-asterisk"></span>与第一次输入保持一致</div>
+  					</div>
+  					<div class="form-group">
+    					<label for="phone" class="col-sm-2 control-label">电话：</label>
+    					<div class="col-sm-6">
+      						<input type="password" class="form-control" id="phone" placeholder="请输入电话">
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>
+  					<div class="form-group">
+    					<label for="truename" class="col-sm-2 control-label">用户姓名：</label>
+    					<div class="col-sm-6">
+      						<input type="password" class="form-control" id="truename" placeholder="请输入姓名">
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>
+        		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">立刻注册</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="addhouse">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">填写房屋信息</h4>
+      </div>
+      <div class="modal-body">
+      		<form class="form-horizontal">
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">标题：</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="newuser" placeholder="请输入标题">
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">户型：</label>
+    					<div class="col-sm-6">
+      						<select>
+      							<option>一室一厅</option>
+      							<option>两室一厅</option>
+      							<option>三室一厅</option>
+      							<option>其他</option>
+      						</select>
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">面积：</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="newuser" placeholder="请输入面积">
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">价格：</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="newuser" placeholder="请输入价格">
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>  				
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">房产证日期：</label>
+    					<div class="col-sm-6">
+      						<input type="date" class="form-control" id="newuser" >
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>  
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">位置：</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="newuser" placeholder="位置">
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>  	
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">图片：</label>
+    					<div class="col-sm-6">
+      						<input type="file" class="form-control" id="newuser">
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>  					
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">联系方式：</label>
+    					<div class="col-sm-6">
+      						<input type="text" class="form-control" id="newuser" placeholder="请输入联系方式">
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>  			
+        			<div class="form-group">
+    					<label for="newuser" class="col-sm-2 control-label">详细信息：</label>
+    					<div class="col-sm-6">
+      						<textarea class="form-control" rows="5" cols="5" placeholder="请输入详细信息"></textarea>
+    					</div>
+    					<div class="col-sm-4"></div>
+  					</div>  					
+  			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">发布</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</section>
+
+
+
+
+		<script type="text/javascript" src="js/jquery-3.1.0.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</body>
+</html>

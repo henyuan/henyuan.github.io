@@ -1,0 +1,80 @@
+.{
+	font-family: "microsoft yahei";
+}
+h4{
+	font-weight: bold;
+}
+label{
+	color: #1B6D85;
+}
+.navbar-default{
+	background-color: #ffffff;
+}
+.navbar-brand{
+	padding: 0px;
+	height: 80px;
+}
+.navbar-form{
+	padding: 0px;
+	margin: 0px;
+	min-height: 80px;
+	line-height: 80px;
+}
+.navbar-header button{
+	margin-top: 22px;
+}
+#searchs .form-group{
+	margin-bottom: 0px;
+}
+#searchs .form-group .row div{
+	padding: 5px;
+}
+#searchs .form-group .row .col-md-2{
+	margin-top: 5px;
+}
+#searchs .form-group .row .col-md-3{
+	margin-top: 2px;
+}
+
+
+#searchs form .pull-right{
+	margin-top: 14px;
+	margin-left: 25px;
+}
+#searchs form .pull-right select{
+	min-width: 100px;
+}
+#house table td img{
+	min-height: 120px;
+}
+#house table td .text-center{
+	margin-top: 30px;
+}
+
+
+#pages ul{
+	margin-top: 0px;
+}
+footer hr{
+	margin-top: 0px;
+}
+footer{
+	color: #D4D4D4;
+}
+footer a{
+	color: #D4D4D4;
+}
+
+.col-sm-2{
+	font-size: 10px;
+	font-weight: bold;
+}
+.col-sm-6{
+	padding: 0px;
+}
+.col-sm-4 span{
+	color: red;
+}
+.col-sm-4{
+	margin-top: 8px;
+}
