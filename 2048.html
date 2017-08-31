@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="sum"><h2>总分数为:<span><span></h2></div>
+    <div class="page">
+        <div class="i0"><span></span></div>
+        <div class="i1"><span></span></div>
+        <div class="i2"><span></span></div>
+        <div class="i3"><span></span></div>
+        <div class="i4"><span></span></div>
+        <div class="i5"><span></span></div>
+        <div class="i6"><span></span></div>
+        <div class="i7"><span></span></div>
+        <div class="i8"><span></span></div>
+        <div class="i9"><span></span></div>
+        <div class="i10"><span></span></div>
+        <div class="i11"><span></span></div>
+        <div class="i12"><span></span></div>
+        <div class="i13"><span></span></div>
+        <div class="i14"><span></span></div>
+        <div class="i15"><span></span></div>
+    </div>
+    <script>
+        $(function(){
+            $(document.body).dblclick();
+        })
+        // 获取随机数
+        function getIndex(max){return Math.floor(Math.random()*16);}
+        // 刷新数据
+        function setView(){
+            $(".sum span").text(sum);
+            data.forEach(function(val,ins){
+                if(val === 2048){
+                    alert("恭喜您，胜利啦!");
+                }
+                if(val === 0){
+                    $('.i'+ins+'>span').text("").css("background",myColor(0));
+                }else{
+                    $('.i'+ins+'>span').text(val).css("background",myColor(val));
+                }
+            })
+        }
+        // 初始数据
+        function getStart(arr){
+            var empty = 0;
+            arr.forEach(function(val){
+                if(val === 0) empty++;
+            })
+            if(empty>=2){
+                var ins1 = getIndex(16);
+                var ins2 = getIndex(16);
+                while(arr[ins1]!=0){ins1 = getIndex(16);}
+                while(arr[ins2]!=0 || ins1 === ins2){ins2 = getIndex(16);}
+                arr[ins1] = 2;
+                arr[ins2] = 2;
+            }
+            if(empty==1){
+                var ins1 = getIndex(16);
+                while(arr[ins1]!=0){ins1 = getIndex(16);}
+                arr[ins1] = 2;
+            }
+            return arr;
+        }
+        // 向左合并
+        function run_left(){
+            var data1 = mySort(data.slice(0,4));
+            var data2 = mySort(data.slice(4,8));
+            var data3 = mySort(data.slice(8,12));
+            var data4 = mySort(data.slice(12,16));
+            var end = [].concat(data1,data2,data3,data4);
+            return end;
+        }
+        // 向上合并
+        function run_top(){
+            var data1 = mySort([data[0],data[4],data[8],data[12]]);
+            var data2 = mySort([data[1],data[5],data[9],data[13]]);
+            var data3 = mySort([data[2],data[6],data[10],data[14]]);
+            var data4 = mySort([data[3],data[7],data[11],data[15]]);
+            var end = [];
+            for(var i=0;i<4;i++){
+                end.push(data1[i]);
+                end.push(data2[i]);
+                end.push(data3[i]);
+                end.push(data4[i]);
+            }
+            return end;
+        }
+        // 向下合并
+        function run_bottom(){
+            var data1 = mySort([data[12],data[8],data[4],data[0]]);
+            var data2 = mySort([data[13],data[9],data[5],data[1]]);
+            var data3 = mySort([data[14],data[10],data[6],data[2]]);
+            var data4 = mySort([data[15],data[11],data[7],data[3]]);
+            var end = [];
+            for(var i=3;i>-1;i--){
+                end.push(data1[i]);
+                end.push(data2[i]);
+                end.push(data3[i]);
+                end.push(data4[i]);
+            }
+            return end;
+        }
+        function run_right(){
+            var data1 = mySort([data[3],data[2],data[1],data[0]]).reverse();
+            var data2 = mySort([data[7],data[6],data[5],data[4]]).reverse();
+            var data3 = mySort([data[11],data[10],data[9],data[8]]).reverse();
+            var data4 = mySort([data[15],data[14],data[13],data[12]]).reverse();
+            var end = [].concat(data1,data2,data3,data4);
+            return end;
+        }
+        // 合并方法
+        function mySort(arr){
+            for(var i = 0;i<arr.length;i++){
+                for(var j = i+1;j<arr.length;j++){
+                    if(arr[i]===0 && arr[j] != 0){
+                        arr[i] = arr[j];
+                        arr[j] = 0;
+                        break;
+                    }
+                }
+            }// 数组前置清空空余
+            for(var i = 0;i<arr.length;i++){
+                if(arr[i] === arr[i+1] && i!=arr.length-1){
+                    arr[i] += arr[i+1];
+                    sum +=arr[i];
+                    arr[i+1]=0;
+                }
+            }// 同数相加
+            for(var i = 0;i<arr.length;i++){
+                for(var j = i+1;j<arr.length;j++){
+                    if(arr[i]===0 && arr[j] != 0){
+                        arr[i] = arr[j];
+                        arr[j] = 0;
+                        break;
+                    }
+                }
+            }// 再次前置清空空余
+            return arr;
+        }
+        // 颜色表
+        function myColor(ins){
+            var color = "";
+            switch (ins) {
+                case 2:color="#eee4da";break;
+                case 4:color="#eee4da";break;
+                case 8:color="#f26179";break;
+                case 16:color="#f59563";break;
+                case 32:color="#f67c5f";break;
+                case 64:color="#f65e36";break;
+                case 128:color="#edcf72";break;
+                case 256:color="#edcc61";break;
+                case 512:color="#9c0";break;
+                case 1024:color="#3365a5";break;
+                case 2048:color="#09c";break;
+                case 4096:color="#a6b";break;
+                case 8192:color="#93c";break;
+                default:color="#cccccc";break;
+            }
+            return color;
+        }
+        var data = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        var sum = 0;
+        data = getStart(data);
+        setView();
+        $(document).keydown(function(event){
+            var left = run_left().toString();
+            var right = run_right().toString();
+            var top = run_top().toString();
+            var bottom = run_bottom().toString();
+            var datas = data.toString();
+            if(datas === left && datas === right && datas === top && datas === bottom){
+                alert("游戏已经结束了...");
+            }
+            var key = "无";
+            var lock = false;
+            switch (event.keyCode) {
+                case 37: key = "左";data = run_left();data = getStart(data);setView();break;
+                case 38: key = "上";data = run_top();data = getStart(data);setView();break;
+                case 39: key = "右";data = run_right();data = getStart(data);setView();break;
+                case 40: key = "下";data = run_bottom();data = getStart(data);setView();break;
+                default: key = "无";lock=true;break;
+            }
+            return lock;
+        });
+        var startX = 0;
+        var startY = 0;
+        $(document).bind("touchmove",function(e){
+            e.preventDefault();
+            var left = run_left().toString();
+            var right = run_right().toString();
+            var top = run_top().toString();
+            var bottom = run_bottom().toString();
+            var datas = data.toString();
+            if(datas === left && datas === right && datas === top && datas === bottom){
+                alert("游戏已经结束了...");
+            }
+        })
+        document.addEventListener("touchstart",function(e){
+            startX = e.touches[0].pageX;
+            startY = e.touches[0].pageY;
+        });
+        document.addEventListener("touchend",function(e){
+            var endX = e.changedTouches[0].pageX;
+            var endY = e.changedTouches[0].pageY;
+            var x = endX - startX;
+            var y = endY - startY;
+            if(Math.abs(x) > Math.abs(y)){
+                if(x>0 && Math.abs(x) > 100){
+                    data = run_right();data = getStart(data);setView()
+                }else{
+                    data = run_left();data = getStart(data);setView();
+                }
+            }else{
+                if(y>0 && Math.abs(y) > 100){
+                    data = run_bottom();data = getStart(data);setView()
+                }else{
+                    data = run_top();data = getStart(data);setView();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
