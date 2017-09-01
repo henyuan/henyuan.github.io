@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/base.m.css">
     <script src="./js/jquery.min.js"></script>
 </head>
 
@@ -36,11 +36,14 @@
     <script src="./js/2048.js"></script>
     <script>
         $(function(){
-            if(!IsPC()){
-                window.location.href="/m2048.html"
+            if(IsPC()){
+                window.location.href="/2048.html"
             }
         });
-        $(document).keydown(function(event){
+        var startX = 0;
+        var startY = 0;
+        $(document).bind("touchmove",function(e){
+            e.preventDefault();
             var left = run_left().toString();
             var right = run_right().toString();
             var top = run_top().toString();
@@ -49,16 +52,30 @@
             if(datas === left && datas === right && datas === top && datas === bottom){
                 alert("游戏已经结束了...");
             }
-            var key = "无";
-            var lock = false;
-            switch (event.keyCode) {
-                case 37: key = "左";data = run_left();data = getStart(data);setView();break;
-                case 38: key = "上";data = run_top();data = getStart(data);setView();break;
-                case 39: key = "右";data = run_right();data = getStart(data);setView();break;
-                case 40: key = "下";data = run_bottom();data = getStart(data);setView();break;
-                default: key = "无";lock=true;break;
+        })
+        document.addEventListener("touchstart",function(e){
+            startX = e.touches[0].pageX;
+            startY = e.touches[0].pageY;
+        });
+        document.addEventListener("touchend",function(e){
+            var endX = e.changedTouches[0].pageX;
+            var endY = e.changedTouches[0].pageY;
+            var x = endX - startX;
+            var y = endY - startY;
+            var touchNum = 50;
+            if(Math.abs(x) > Math.abs(y)){
+                if(x > touchNum){
+                    data = run_right();data = getStart(data);setView()
+                }else if(x < -touchNum){
+                    data = run_left();data = getStart(data);setView();
+                }
+            }else{
+                if(y > touchNum){
+                    data = run_bottom();data = getStart(data);setView()
+                }else if(y < -touchNum){
+                    data = run_top();data = getStart(data);setView();
+                }
             }
-            return lock;
         });
     </script>
 </body>

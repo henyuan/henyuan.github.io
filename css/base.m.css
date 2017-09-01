@@ -2,33 +2,34 @@
     margin: 0;
     padding: 0
 }
+html,body{
+    height: 100%;
+    width: 100%;
+    background: #eeeeee;
+}
 
 .sum {
     text-align: center;
-    margin-top: 30px
 }
-
 .sum p{
-    width: 600px;
+    width: 80vw;
     margin: 0 auto;
+    font-size: .8rem;
     text-indent: 2em;
     text-align: left;
 }
 
 .page {
-    width: 600px;
-    height: 600px;
-    padding: 4px;
-    background: #eeeeee;
-    margin: 0 auto;
-    margin-top: 20px;
-    font-size: 0
+    width: 80vw;
+    height: 80vw;
+    margin: 5vw auto 0 auto;
+    font-size: 0;
 }
 
 .page>div {
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 20vw;
+    height: 20vw;
     vertical-align: top
 }
 
@@ -36,16 +37,16 @@
     display: block;
     color: #ffffff;
     font-weight: bold;
-    margin: 4px auto;
-    width: 140px;
-    height: 140px;
+    margin: 0 auto;
+    width: 19vw;
+    height: 19vw;
     border-radius: 20px;
     background: #cccccc;
-    font-size: 60px;
+    font-size: 3.5rem;
     text-align: center;
-    line-height: 140px;
+    line-height: 19vw;
     user-select: none;
     transition: all .9s;
     cursor: pointer;
-    font-family: cursive
+    font-family: cursive;
 }
