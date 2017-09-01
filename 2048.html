@@ -151,19 +151,19 @@
         function myColor(ins){
             var color = "";
             switch (ins) {
-                case 2:color="#eee4da";break;
-                case 4:color="#eee4da";break;
-                case 8:color="#f26179";break;
-                case 16:color="#f59563";break;
-                case 32:color="#f67c5f";break;
-                case 64:color="#f65e36";break;
-                case 128:color="#edcf72";break;
-                case 256:color="#edcc61";break;
-                case 512:color="#9c0";break;
-                case 1024:color="#3365a5";break;
-                case 2048:color="#09c";break;
-                case 4096:color="#a6b";break;
-                case 8192:color="#93c";break;
+                case 2:color="#FFE4C4";break;
+                case 4:color="#FFEC8B";break;
+                case 8:color="#FFC125";break;
+                case 16:color="#FF7F24";break;
+                case 32:color="#FF4040";break;
+                case 64:color="#FF1493";break;
+                case 128:color="#FF00FF";break;
+                case 256:color="#FF0000";break;
+                case 512:color="#EE00EE";break;
+                case 1024:color="#404040";break;
+                case 2048:color="#EEEE00";break;
+                case 4096:color="#8B2252";break;
+                case 8192:color="#0A0A0A";break;
                 default:color="#cccccc";break;
             }
             return color;
@@ -215,18 +215,20 @@
             var x = endX - startX;
             var y = endY - startY;
             if(Math.abs(x) > Math.abs(y)){
-                if(x>0 && Math.abs(x) > 100){
+                if(x > 300){
                     data = run_right();data = getStart(data);setView()
-                }else{
+                }else if(x < -300){
                     data = run_left();data = getStart(data);setView();
                 }
             }else{
-                if(y>0 && Math.abs(y) > 100){
+                if(y > 300){
                     data = run_bottom();data = getStart(data);setView()
-                }else{
+                }else if(y < -300){
                     data = run_top();data = getStart(data);setView();
                 }
             }
+            console.log("x:"+x)
+            console.log("y:"+y)
         });
     </script>
 </body>
