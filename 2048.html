@@ -214,21 +214,20 @@
             var endY = e.changedTouches[0].pageY;
             var x = endX - startX;
             var y = endY - startY;
+            var touchNum = 240;
             if(Math.abs(x) > Math.abs(y)){
-                if(x > 300){
+                if(x > touchNum){
                     data = run_right();data = getStart(data);setView()
-                }else if(x < -300){
+                }else if(x < -touchNum){
                     data = run_left();data = getStart(data);setView();
                 }
             }else{
-                if(y > 300){
+                if(y > touchNum){
                     data = run_bottom();data = getStart(data);setView()
-                }else if(y < -300){
+                }else if(y < -touchNum){
                     data = run_top();data = getStart(data);setView();
                 }
             }
-            console.log("x:"+x)
-            console.log("y:"+y)
         });
     </script>
 </body>
