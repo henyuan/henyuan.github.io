@@ -9,7 +9,8 @@ function getIndex(max){return Math.floor(Math.random()*16);}
 function setView(){
     $(".sum span").text(sum);
     data.forEach(function(val,ins){
-        if(val === 2048){
+        if(val === 2048 && !game){
+            game = true;
             alert("恭喜您，胜利啦!");
         }
         if(val === 0){
@@ -150,5 +151,6 @@ function IsPC()
 }       
 var data = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var sum = 0;
+var game = false;
 data = getStart(data);
 setView();
