@@ -41,12 +41,12 @@
             }
         });
         $(document).keydown(function(event){
-            var left = run_left().toString();
-            var right = run_right().toString();
-            var top = run_top().toString();
-            var bottom = run_bottom().toString();
+            var left = run_left(false).toString();
+            var right = run_right(false).toString();
+            var top = run_top(false).toString();
+            var bottom = run_bottom(false).toString();
             var datas = data.toString();
-            if(datas === left && datas === right && datas === top && datas === bottom){
+            if(datas === left && left === right && right === top && top === bottom){
                 alert("游戏已经结束了...");
             }
             var key = "无";

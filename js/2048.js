@@ -42,20 +42,20 @@ function getStart(arr){
     return arr;
 }
 // 向左合并
-function run_left(){
-    var data1 = mySort(data.slice(0,4));
-    var data2 = mySort(data.slice(4,8));
-    var data3 = mySort(data.slice(8,12));
-    var data4 = mySort(data.slice(12,16));
+function run_left(count = true){
+    var data1 = mySort(data.slice(0,4),count);
+    var data2 = mySort(data.slice(4,8),count);
+    var data3 = mySort(data.slice(8,12),count);
+    var data4 = mySort(data.slice(12,16),count);
     var end = [].concat(data1,data2,data3,data4);
     return end;
 }
 // 向上合并
-function run_top(){
-    var data1 = mySort([data[0],data[4],data[8],data[12]]);
-    var data2 = mySort([data[1],data[5],data[9],data[13]]);
-    var data3 = mySort([data[2],data[6],data[10],data[14]]);
-    var data4 = mySort([data[3],data[7],data[11],data[15]]);
+function run_top(count = true){
+    var data1 = mySort([data[0],data[4],data[8],data[12]],count);
+    var data2 = mySort([data[1],data[5],data[9],data[13]],count);
+    var data3 = mySort([data[2],data[6],data[10],data[14]],count);
+    var data4 = mySort([data[3],data[7],data[11],data[15]],count);
     var end = [];
     for(var i=0;i<4;i++){
         end.push(data1[i]);
@@ -66,11 +66,11 @@ function run_top(){
     return end;
 }
 // 向下合并
-function run_bottom(){
-    var data1 = mySort([data[12],data[8],data[4],data[0]]);
-    var data2 = mySort([data[13],data[9],data[5],data[1]]);
-    var data3 = mySort([data[14],data[10],data[6],data[2]]);
-    var data4 = mySort([data[15],data[11],data[7],data[3]]);
+function run_bottom(count = true){
+    var data1 = mySort([data[12],data[8],data[4],data[0]],count);
+    var data2 = mySort([data[13],data[9],data[5],data[1]],count);
+    var data3 = mySort([data[14],data[10],data[6],data[2]],count);
+    var data4 = mySort([data[15],data[11],data[7],data[3]],count);
     var end = [];
     for(var i=3;i>-1;i--){
         end.push(data1[i]);
@@ -80,16 +80,16 @@ function run_bottom(){
     }
     return end;
 }
-function run_right(){
-    var data1 = mySort([data[3],data[2],data[1],data[0]]).reverse();
-    var data2 = mySort([data[7],data[6],data[5],data[4]]).reverse();
-    var data3 = mySort([data[11],data[10],data[9],data[8]]).reverse();
-    var data4 = mySort([data[15],data[14],data[13],data[12]]).reverse();
+function run_right(count = true){
+    var data1 = mySort([data[3],data[2],data[1],data[0]],count).reverse();
+    var data2 = mySort([data[7],data[6],data[5],data[4]],count).reverse();
+    var data3 = mySort([data[11],data[10],data[9],data[8]],count).reverse();
+    var data4 = mySort([data[15],data[14],data[13],data[12]],count).reverse();
     var end = [].concat(data1,data2,data3,data4);
     return end;
 }
 // 合并方法
-function mySort(arr){
+function mySort(arr,count){
     for(var i = 0;i<arr.length;i++){
         for(var j = i+1;j<arr.length;j++){
             if(arr[i]===0 && arr[j] != 0){
@@ -99,10 +99,10 @@ function mySort(arr){
             }
         }
     }// 数组前置清空空余
-    for(var i = 0;i<arr.length;i++){
-        if(arr[i] === arr[i+1] && i!=arr.length-1){
+    for(var i = 0;i<arr.length - 1;i++){
+        if(arr[i] === arr[i+1]){
             arr[i] += arr[i+1];
-            sum +=arr[i];
+            sum = count ? sum + arr[i] : sum;
             arr[i+1]=0;
         }
     }// 同数相加
